@@ -114,5 +114,7 @@ overall_rank = data_without_na %>%
 #ordering 
 ordered_rank <- overall_rank[order(-overall_rank$overall_score),]
 
-write_csv(ordered_rank,"cleanedData/ranking.csv")
+#getting top three data
+topThree=head(ordered_rank,3)
 
+write_csv(topThree,"cleanedData/ranking.csv")
